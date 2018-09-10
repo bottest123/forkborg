@@ -1,1 +1,12 @@
 telethon
+regex
+urbandict
+requests
+Pillow
+hachoir
+cryptg
+cfscrape
+beautifulsoup4
+wikipedia
+gtts
+googletrans
