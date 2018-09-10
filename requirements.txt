@@ -18,3 +18,4 @@ google_images_download
 rivescript
 iso-639==0.4.5
 antispam
+gsearch
