@@ -7,7 +7,7 @@ from datetime import datetime
 from googletrans import Translator
 
 
-@borg.on(events.NewMessage(pattern=r".tr (.*)", outgoing=True))
+@borg.on(events.NewMessage(pattern=r".tr (.*)"))
 async def _(event):
     if event.fwd_from:
         return
