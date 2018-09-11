@@ -20,7 +20,7 @@
     },
     "SCREEN_SHOT_LAYER_ACCESS_KEY": {
       "description": "Get your own ACCESS_KEY from http://api.screenshotlayer.com/api/capture",
-      "value": "",
+      "value": "4a43ab2850735616c619486c1f4dad6c",
       "required": false
     },
     "PRIVATE_GROUP_BOT_API_ID": {
