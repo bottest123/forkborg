@@ -25,4 +25,4 @@ telethon-aio
 youtube-dl
 eyed3
 libav
-exa
+
