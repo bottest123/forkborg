@@ -24,3 +24,4 @@ instantmusic
 telethon-aio
 youtube-dl
 pexpect
+wget
