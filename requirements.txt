@@ -19,3 +19,10 @@ rivescript
 iso-639==0.4.5
 antispam
 gsearch
+aioify
+instantmusic
+telethon-aio
+youtube-dl
+eyed3
+libav
+exa
