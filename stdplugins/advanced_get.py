@@ -3,7 +3,6 @@ from functools import partial
 from uniborg import util
 
 
-
 @borg.on(events.NewMessage(pattern=r"(?i)^\.aget (.*)$"))
 async def _(event):
     if await util.isAdmin(event):
