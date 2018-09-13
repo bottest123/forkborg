@@ -23,6 +23,4 @@ aioify
 instantmusic
 telethon-aio
 youtube-dl
-eyed3
-libav
-
+pexpect
