@@ -157,11 +157,6 @@ async def common_outgoing_handler(e):
         await e.respond("```Successfully cleaned Marie notes yaay!```\n Gimme cookies @baalajimaestro")
     elif find=="rekt":
         await e.edit("Get Rekt man! ( ͡° ͜ʖ ͡°)")
-    elif find=="speed":
-            l=await e.reply('`Running speed test . . .`')
-            k=subprocess.run(['speedtest-cli'], stdout=subprocess.PIPE)
-            await l.edit('`' + k.stdout.decode()[:-1] + '`')
-            await e.delete()
     elif find == "alive":
         await e.edit("`Master! I am alive😁`")
     elif find=="notafk":
