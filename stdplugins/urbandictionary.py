@@ -6,7 +6,7 @@ from telethon import events
 import urbandict
 
 
-@borg.on(events.NewMessage(pattern="^.ud (.*)", outgoing=True))
+@borg.on(events.NewMessage(pattern="^.ud (.*)"))
 async def _(event):
     if event.fwd_from:
         return
