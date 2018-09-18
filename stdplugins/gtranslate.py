@@ -29,7 +29,7 @@ async def _(event):
     
 # For people's Use They can translate Things from you with the below command
 
-@borg.on(events.NewMessage))
+@borg.on(events.NewMessage(outgoing=True))
 async def f(e):
 	global tr
 	global translate_to
@@ -39,6 +39,7 @@ async def f(e):
 		if e.chat_id in translate_group:
 			to = translate_to
 			await e.edit(trans.translate(e.raw_text, dest=to).text)
+			
 
 @borg.on(events.NewMessage(pattern=".tran (.*)"))
 async def tr(e):
