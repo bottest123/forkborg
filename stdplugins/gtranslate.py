@@ -29,7 +29,37 @@ async def _(event):
     
 # For people's Use They can translate Things from you with the below command
 
-@borg.on(events.NewMessage)
+#trans
+global tr
+global translate_to
+global translate_group
+translate_group = []
+
+tr = False
+@borg.on(events.NewMessage(pattern="^start translation (.+)"))
+async def starttr(e):
+	global tr
+	global translate_to
+	global translate_group
+	tr = True
+	translate_to = e.pattern_match.group(1)
+
+	global translate_group
+	translate_group.append(e.chat_id)
+
+	await e.reply("Started translation to "+translate_to)
+
+@borg.on(events.NewMessage(pattern="^stop translation (.+)"))
+async def starttr(e):
+	global tr
+	tr = False
+	translate_group.remove(e.chat_id)
+	await e.reply("Stopped translation")	
+
+# auto translation
+
+
+@borg.on(events.NewMessage(outgoing=True))
 async def f(e):
 	global tr
 	global translate_to
@@ -39,7 +69,28 @@ async def f(e):
 		if e.chat_id in translate_group:
 			to = translate_to
 			await e.edit(trans.translate(e.raw_text, dest=to).text)
-			
+
+@borg.on(events.NewMessage(pattern="marq (.+)"))
+async def ls(e):
+	x = e.pattern_match.group(1)
+	for i in x:
+		await e.edit(i)
+		time.sleep(0.7)
+@borg.on(events.NewMessage(pattern="ls"))
+async def ls(e):
+	x = '😀😃😄😁😅😆😂🤣'
+	for i in x:
+		await e.edit(i)
+		time.sleep(0.7)
+
+@borg.on(events.NewMessage(pattern="sl"))
+async def ls(e):
+	x = '😡😠😤😖😣☹️🙁😕🙂😊☺️'
+	for i in x:
+		await e.edit(i)
+		time.sleep(0.7)
+
+
 
 @borg.on(events.NewMessage(pattern=".tran (.*)"))
 async def tr(e):
@@ -71,3 +122,4 @@ async def tr(e):
         	return
         frm = languages.get(part1=text.src).name
         await e.reply('From: '+frm+'\n'+text.text)
+
