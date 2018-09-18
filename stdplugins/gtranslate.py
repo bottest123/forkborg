@@ -29,7 +29,7 @@ async def _(event):
     
 # For people's Use They can translate Things from you with the below command
 
-@borg.on(events.NewMessage(outgoing=True))
+@borg.on(events.NewMessage)
 async def f(e):
 	global tr
 	global translate_to
