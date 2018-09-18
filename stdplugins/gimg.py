@@ -4,7 +4,7 @@ from google_images_download import google_images_download   #importing the libra
 import sys, os, re, subprocess, time, logging, math
 from datetime import datetime, timedelta
 
-@borg.on(events.NewMessage(pattern=".img (.*)", incoming=True))
+@borg.on(events.NewMessage(pattern=".img (.*)"))
 async def img(e):
 	await e.edit('Processing...')
 	start=round(time.time() * 1000)
